@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Notie test</title>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <div class="row">
+      <pre>
+        $('#btn').on('click', function() {
+          $.ajax({
+            url: '/1.json',
+            beforeSend: function() {
+              notie.alert(4, 'Sending')
+            },
+            success: function() {
+              notie.alert(1, 'success');
+            }
+          });
+
+        });
+      </pre>
+    </div>
+    <div class="row text-center">
+      <button class="btn btn-danger" id="btn">Hello Notie!</button>
+    </div>
+    <script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/475/n8dbenxd/notie.js"></script>
+    <script>
+      $('#btn').on('click', function() {
+        $.ajax({
+          url: '/1.json',
+          beforeSend: function() {
+            notie.alert(4, 'Sending')
+          },
+          success: function() {
+            notie.alert(1, 'success');
+          }
+        });
+
+      });
+    </script>
+  </body>
+</html>
